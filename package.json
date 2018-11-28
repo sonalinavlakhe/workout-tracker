@@ -1,5 +1,9 @@
 {
   "name": "workout_tracker",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "vue-resource": "^1.5.1",
+    "webpack-dev-server": "2.11.2"
+  }
 }

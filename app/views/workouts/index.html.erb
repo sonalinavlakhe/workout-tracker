@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+-binding.pry
+<h1>Workouts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>String</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @workouts.each do |workout| %>
+      <tr>
+        <td><%= workout.title %></td>
+        <td><%= workout.string %></td>
+        <td><%= workout.date %></td>
+        <td><%= link_to 'Show', workout %></td>
+        <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
+        <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Workout', new_workout_path %>
